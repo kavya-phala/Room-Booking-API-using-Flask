@@ -6,7 +6,7 @@ WORKDIR /Docker-Flask_api
 ADD . /Docker-Flask_api
 #pip to install dependencies
 RUN pip install -r requirements.txt
-#define command to start containe
+#define command to start container
 EXPOSE 5000
 
 
