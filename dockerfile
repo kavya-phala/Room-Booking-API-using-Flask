@@ -1,6 +1,7 @@
-FROM python:3.8-alpine
+FROM python:3 
 WORKDIR /usr/src/booking
-ADD . /Docker-Flask_api
-RUN pip install -r requirements.txt
-EXPOSE 5000
-CMD ["python","Bookings_API.py"]
+COPY requirements.txt . 
+RUN pip3 install --no-cache-dir -r requirements.txt
+COPY . . 
+ENTRYPOINT [ "python" ]
+CMD [ "booking.py" ]
