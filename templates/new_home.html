@@ -27,7 +27,7 @@
             font-family:arvo
             text-align:left
             font-colour: blue
-            line-height: 25px
+            line-height: 30px
         }
     </style>
     <h1>Welcome to Take a Brek!!</h1>
@@ -43,10 +43,9 @@
       {%- for message in get_flashed_messages() %}
          {{ message }}
       {%- endfor %}
-      <p> bookings(<a href = "{{('new_booking') }}">Book with us!</a>)</p>
     <h3>Contact us at: 4446712345</h3>
     <h3>Email us at: TakeABrek@gmail.com</h3>
-
+    <p> bookings(<a href = "{{('new_booking') }}">Book with us!</a>)</p>
     <p><a href = "{{ url_for('view_booking') }}">Want to delete a booking?</a></p>
     </body>
 </head>
